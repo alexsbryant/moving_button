@@ -9,7 +9,11 @@ const App = () => {
   const handleMove = () => {
     let randomX = Math.floor(Math.random() * 700);
     let randomY = Math.floor(Math.random() * 500);
-    setPosition({x: {randomX}, y: {randomY}})
+    setPosition({x: randomX, y: randomY})
+  };
+
+  const handleClick = () => {
+    alert("You did it!")
   };
 
   return (
@@ -20,6 +24,8 @@ const App = () => {
           left: position.x,
           top: position.y
         }}
+        onMouseEnter={handleMove}
+        onClick={handleClick}
       > Click me then... </button>
     </div>
   )
